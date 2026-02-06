@@ -1,4 +1,3 @@
-import { Overpass } from "next/font/google";
 import { overpassType } from "@/types";
 import { locationType } from "@/types";
 

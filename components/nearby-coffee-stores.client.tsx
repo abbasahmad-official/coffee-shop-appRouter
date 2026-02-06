@@ -4,7 +4,7 @@ import Banner from './banner.client'
 import Card from './card.server';
 import useTrackLocation from '@/hooks/use-track-location';
 import { coffeeStoresType } from '@/types';
-import { fetchCoffeeStores } from '@/lib/coffee-stores';
+
 
 const NearbyCoffeeStores = () => {
     const[coffeeStores, setCoffeeStores] = useState([]);

@@ -2,7 +2,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { useFormState, useFormStatus } from 'react-dom'
-import { updateCoffeeStore } from '@/lib/airtable';
 import { State } from '@/types';
 import { upvoteAction } from '@/actions';
 
