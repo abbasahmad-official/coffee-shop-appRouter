@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gradient: url("/assets/mesh-gradient.webp");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme inline{
+  --color-purple-951: #5755eb;
+  --color-gray-951: hsla(0, 0%, 100%, 0.4);
+  --color-gray-950: hsla(0, 0%, 100%, 0.7);
+  --color-gray-952: #373b64;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+@layer base {
+  body{
+  padding: 0px;
+  margin: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  @apply bg-[image:var(--gradient)] bg-cover bg-[50%_10%] bg-repeat ;
+}
+
+h1 {
+  @apply text-3xl font-bold  text-white md:text-5xl lg:text-6xl ;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+p{
+  @apply text-base font-medium;
+}
+
+button{
+  @apply w-fit cursor-pointer rounded-lg border-0
+   bg-purple-951 px-6 py-4 text-white hover:bg-violet-900;
+}
+
+button:focus{
+  @apply outline-dotted outline-1;
+}
+
+}
+
+
+@layer components {
+  .glass{
+    @apply border border-solid border-[hsla(0,0%,100%,0.2)] bg-gray-951
+     backdrop-blur-[10px] hover:border hover:border-solid hover:border-white;
+    -webkit-backdrop-filter: blur(10px);
+    }
+
+  .glass:hover{
+    @apply bg-gray-950 
   }
+  
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
