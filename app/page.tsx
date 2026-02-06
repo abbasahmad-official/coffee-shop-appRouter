@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import { getDomain } from "@/utils";
 
 
+export const dynamic = 'force-static'
 
 
 export const metadata: Metadata = {
